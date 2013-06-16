@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ thisgraph }}{% endblock %}
+{% block main %}
+<h1>MRTG {{ thisgraph }} More Graphs</h1>
+{% for start, end in durations %}
+<div class="graph">
+<span class="graphheading">Graphs from {{ start }} {{ durationname }}s to {% if end == 0 %}now{% else %}{{ end }} {{ durationname }}s{% endif %}</span><br>
+<img src="/static/img/{{ thisgraph }}/{{ durationname }}/{{ start }}.png">
+</div>
+{% endfor %}
+{% endblock %}

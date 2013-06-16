@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ thisgraph }}{% endblock %}
+{% block main %}
+<h1>MRTG {{ thisgraph }} Graphs</h1>
+{% for key in durations %}
+<div class="graph">
+<span class="graphheading">{{ graphs[thisgraph]["prettyname"] }} this {{ key }}</span><br>
+<img src="/static/img/{{ thisgraph }}/{{ key }}/latest.png"><br>
+<a class="morelink" href="{{ key }}/more/">More</a>
+</div>
+{% endfor %}
+<br><a class="customgraph" href="own/">Create a custom graph</a>
+{% endblock %}

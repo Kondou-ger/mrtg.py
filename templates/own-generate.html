@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}custom {{ thisgraph }}{% endblock %}
+{% block main %}
+<h1>Create a custom {{ thisgraph }} graph</h1>
+<form method="post">
+	<label for="start">Start: </label><input type="text" name="start"><br>
+	<label for="end">End: </label><input type="text" name="end"><br>
+	<label for="step">Step: </label><input type="text" name="step"><br>
+	<label for="lazy">Lazy: </label><input type="checkbox" name="lazy"><br>
+	<label for="slopes">Slopes: </label><input type="checkbox" name="slopes"><br>
+	<label for="width">Width: </label><input type="number" name="width"><br>
+	<label for="height">Height: </label><input type="number" name="height"><br>
+	<label for="vert-axis">Vertical Axis Name: </label><input type="text" name="vert-axis"><br>
+	<label for="area-color">Area Color: </label><input type="color" name="area-color"><br>
+	<label for="line-color">Line Color: </label><input type="color" name="line-color"><br>
+	<input type="submit">
+</form>
+{% endblock %}

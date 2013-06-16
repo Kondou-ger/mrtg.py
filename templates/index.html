@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block main %}
+<h1>MRTG Index Page</h1>
+{% for graph in graphs recursive %}
+<div class="graph">
+<a href="/{{ graph }}/"><span class="graphheading">{{ graphs[graph]["prettyname"] }}</span></a><br>
+<a href="/{{ graph }}/"><img src="/static/img/{{ graph }}/day/latest.png"></a>
+</div>
+{% endfor %}
+{% endblock %}

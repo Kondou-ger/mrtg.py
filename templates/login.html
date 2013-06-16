@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block main %}
+<div class="login">
+{% if wrongpw %}
+<div class="alert">
+Wrong password
+</div>
+{% endif %}
+<form method="post">
+	<label for="nick">Nickname: </label><input type="text" name="nick"><br>
+	<label for="password">Password: </label><input type="password" name="password"><br>
+	<input type="submit">
+</form>
+</div><!-- .login -->
+{% endblock %}

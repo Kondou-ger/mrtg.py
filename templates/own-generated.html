@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}custom {{ thisgraph }}{% endblock %}
+{% block main %}
+<h1>Custom {{ thisgraph }} graph</h1>
+<div class="graph">
+<a href="/static/img/{{ thisgraph }}/custom.png"><img src="/static/img/{{ thisgraph }}/custom.png"></a><br>
+</div>
+{% endblock %}
